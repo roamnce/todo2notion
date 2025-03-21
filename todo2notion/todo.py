@@ -333,8 +333,8 @@ def login(username, password):
 
 def main():
     config = notion_helper.config
-    username = 2942515708@qq.com
-    password = luoxia+dida123
+    username = config.get("滴答清单账号")
+    password = config.get("滴答清单密码")
     session = login(username, password)
     projects = notion_helper.query_all(notion_helper.project_database_id)
     project_dict = {}
